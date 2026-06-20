@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Romil Bansal — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 3D canvas stays fixed behind everything -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-logo">RPB<span class="nav-dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      Available for opportunities
+    </div>
+    <h1 class="hero-name">
+      <span class="name-line">Romil</span>
+      <span class="name-line accent">Bansal</span>
+    </h1>
+    <p class="hero-role">
+      <span class="typed-text" id="typed"></span><span class="cursor">|</span>
+    </p>
+    <p class="hero-location">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Barnala, Punjab, India &nbsp;·&nbsp; BE Computer Science @ TIET Patiala (2026)
+    </p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="assets/resume.pdf" class="btn btn-outline" download>Download CV</a>
+      <a href="#contact" class="btn btn-outline">Get In Touch</a>
+    </div>
+    <div class="hero-socials">
+      <a href="mailto:romilprince42@gmail.com" class="social-link" title="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+      </a>
+      <a href="https://github.com/Romil42" class="social-link" title="GitHub" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/romil-prince-bansal-211a23278/" class="social-link" title="LinkedIn" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://leetcode.com/u/romilprince42/" class="social-link" title="LeetCode" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">01 — About</div>
+    <div class="about-grid">
+      <div class="about-avatar">
+        <div class="avatar-ring">
+          <img src="assets/images/photo.png" alt="Romil Bansal" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;" />
+        </div>
+        <div class="about-tags">
+          <span class="about-tag">ML Engineer</span>
+          <span class="about-tag">Full Stack</span>
+          <span class="about-tag">Computer Vision</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <h2 class="section-title">Building things that actually work.</h2>
+        <p class="about-para">I'm a final-year Computer Science student at Thapar Institute of Engineering and Technology, graduating June 2026. I build end-to-end systems — from training CNNs on custom datasets to deploying full-stack AI platforms with React frontends and FastAPI backends.</p>
+        <p class="about-para">My work sits at the intersection of machine learning and practical software engineering. I care about real performance numbers: 95%+ accuracy, sub-100ms latency, 30% throughput improvements — not just models that work in notebooks.</p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Major Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">95%</span>
+            <span class="stat-label">CNN Accuracy</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">500K+</span>
+            <span class="stat-label">Records Processed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">02 — Skills</div>
+    <h2 class="section-title">Technical stack</h2>
+
+    <div class="skills-categories">
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Languages</h3>
+        <div class="skill-pills">
+          <span class="pill">Python</span>
+          <span class="pill">C</span>
+          <span class="pill">C++</span>
+          <span class="pill">HTML5</span>
+          <span class="pill">CSS3</span>
+          <span class="pill">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">ML / Data</h3>
+        <div class="skill-pills">
+          <span class="pill">TensorFlow</span>
+          <span class="pill">Scikit-Learn</span>
+          <span class="pill">XGBoost</span>
+          <span class="pill">OpenCV</span>
+          <span class="pill">NumPy</span>
+          <span class="pill">Pandas</span>
+          <span class="pill">Matplotlib</span>
+          <span class="pill">Plotly</span>
+          <span class="pill">TextBlob</span>
+          <span class="pill">MLxtend</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Frameworks</h3>
+        <div class="skill-pills">
+          <span class="pill">FastAPI</span>
+          <span class="pill">React</span>
+          <span class="pill">Streamlit</span>
+          <span class="pill">Bootstrap</span>
+          <span class="pill">Tailwind CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Tools & Platforms</h3>
+        <div class="skill-pills">
+          <span class="pill">Git / GitHub</span>
+          <span class="pill">Tableau</span>
+          <span class="pill">Jupyter</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">Excel</span>
+          <span class="pill">Groq API</span>
+          <span class="pill">Llama 4 Vision</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proficiency-bars">
+      <h3 class="skill-cat-title" style="margin-bottom:1.5rem;">Proficiency</h3>
+      <div class="skill-item">
+        <div class="skill-label-row"><span>Python & ML</span><span class="skill-pct">95%</span></div>
+        <div class="skill-track"><div class="skill-bar" data-width="95"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label-row"><span>Computer Vision / Deep Learning</span><span class="skill-pct">88%</span></div>
+        <div class="skill-track"><div class="skill-bar" data-width="88"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label-row"><span>Full Stack (React + FastAPI)</span><span class="skill-pct">82%</span></div>
+        <div class="skill-track"><div class="skill-bar" data-width="82"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label-row"><span>Data Analysis & Visualization</span><span class="skill-pct">85%</span></div>
+        <div class="skill-track"><div class="skill-bar" data-width="85"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label-row"><span>NLP</span><span class="skill-pct">75%</span></div>
+        <div class="skill-track"><div class="skill-bar" data-width="75"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">03 — Experience</div>
+    <h2 class="section-title">Education & Involvement</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-date">Expected June 2026</span>
+            <span class="timeline-type edu">Education</span>
+          </div>
+          <h3 class="timeline-role">BE — Computer Science & Engineering</h3>
+          <span class="timeline-org">Thapar Institute of Engineering and Technology, Patiala</span>
+          <p class="timeline-desc">Pursuing a full degree with focus on machine learning, computer vision, data structures, algorithms, DBMS, and operating systems.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-date">Jan 2023 – May 2024</span>
+            <span class="timeline-type vol">Leadership</span>
+          </div>
+          <h3 class="timeline-role">Core Member — Mudra Cultural Club</h3>
+          <span class="timeline-org">Thapar Institute of Engineering and Technology</span>
+          <p class="timeline-desc">Spearheaded logistics and on-ground execution for 5+ large-scale cultural events with 500+ attendees each, coordinating cross-functional teams of 20+ volunteers. Oversaw backstage operations and audience engagement — contributing to a 30% improvement in participant satisfaction scores.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">04 — Projects</div>
+    <h2 class="section-title">Things I've built</h2>
+    <div class="projects-grid">
+
+      <div class="project-card" data-tilt>
+        <div class="project-card-inner">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="project-tags-top">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">TensorFlow</span>
+              <span class="project-tag">CNN</span>
+            </div>
+          </div>
+          <h3 class="project-title">Drowsiness Detection System</h3>
+          <p class="project-desc">Real-time driver alertness monitoring using OpenCV Haar Cascade classifiers and a custom CNN trained on 4,000 MRL Eye Dataset samples. Achieved 95%+ validation accuracy with sub-100ms alert latency.</p>
+          <ul class="project-bullets">
+            <li>30% inference throughput boost (23 → 30 FPS) via TFLite quantization</li>
+            <li>40% reduction in simulated fatigue incidents across 500+ test scenarios</li>
+            <li>Pygame-based audio alerts on 15 consecutive closed-eye frames</li>
+          </ul>
+          <div class="project-footer">
+            <a href="#" class="project-link">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-tilt>
+        <div class="project-card-inner">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="project-tags-top">
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">Groq API</span>
+              <span class="project-tag">Llama 4</span>
+            </div>
+          </div>
+          <h3 class="project-title">AI Caption Agent</h3>
+          <p class="project-desc">Full-stack agentic AI platform using FastAPI and Groq's Llama 4 Vision model. Automates multi-platform social media caption generation from image uploads with sub-10s end-to-end latency.</p>
+          <ul class="project-bullets">
+            <li>10-dimensional content briefs routed through 6 platform-specific templates</li>
+            <li>Supports Instagram, YouTube, Twitter/X, LinkedIn, Hashtags & Alt Text</li>
+            <li>Drag-and-drop React dashboard with tone selection and one-click copy</li>
+          </ul>
+          <div class="project-footer">
+            <a href="#" class="project-link">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-tilt>
+        <div class="project-card-inner">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <div class="project-tags-top">
+              <span class="project-tag">Streamlit</span>
+              <span class="project-tag">XGBoost</span>
+              <span class="project-tag">MLxtend</span>
+              <span class="project-tag">TextBlob</span>
+            </div>
+          </div>
+          <h3 class="project-title">Retail & E-Commerce Analytics Platform</h3>
+          <p class="project-desc">Unified ML analytics dashboard with Market Basket Analysis, CLV prediction, and NLP-driven Sentiment Demand Analysis — all in a single Streamlit interface.</p>
+          <ul class="project-bullets">
+            <li>Apriori algorithm across 500,000+ retail transactions for cross-selling insights</li>
+            <li>XGBoost CLV model with 4-tier automated segmentation (Low → Premium)</li>
+            <li>TextBlob NLP pipeline processing 10,000+ reviews via chunked streaming</li>
+          </ul>
+          <div class="project-footer">
+            <a href="#" class="project-link">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">05 — Contact</div>
+    <h2 class="section-title">Let's build something.</h2>
+    <p class="contact-sub">Open to internships, full-time roles, and interesting projects. Drop me a line — I reply fast.</p>
+    <div class="contact-cards">
+
+      <!-- email — full width primary card -->
+      <a href="mailto:romilprince42@gmail.com" class="contact-card contact-card--primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        <span>romilprince42@gmail.com</span>
+      </a>
+
+      <!-- phone -->
+      <a href="tel:+919465401571" class="contact-card">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.41 2 2 0 0 1 3.59 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.76a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+91 9465401571</span>
+      </a>
+
+      <!-- linkedin -->
+      <a href="https://www.linkedin.com/in/romil-prince-bansal-211a23278/" class="contact-card" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <span>LinkedIn</span>
+      </a>
+
+      <!-- github -->
+      <a href="https://github.com/Romil42" class="contact-card" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <span>GitHub</span>
+      </a>
+
+      <!-- leetcode -->
+      <a href="https://leetcode.com/u/romilprince42/" class="contact-card" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"/></svg>
+        <span>LeetCode</span>
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Romil Prince Bansal &nbsp;·&nbsp; Built with Three.js + GSAP</p>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
