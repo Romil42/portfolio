@@ -99,8 +99,8 @@ GitHub Pages rebuilds automatically in ~2 minutes.
 **Romil Prince Bansal**
 - Email: romilprince42@gmail.com
 - GitHub: [@Romil42](https://github.com/Romil42)
-- LinkedIn: [linkedin.com/in/romilbansal](https://linkedin.com/in/romilbansal)
-- LeetCode: [leetcode.com/romilbansal](https://leetcode.com/romilbansal)
+- LinkedIn: [linkedin.com/in/romilbansal](https://www.linkedin.com/in/romil-prince-bansal-211a23278/)
+- LeetCode: [leetcode.com/romilbansal](https://leetcode.com/u/romilprince42/)
 
 ---
 
